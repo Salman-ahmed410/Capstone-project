@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+     function calculateDevEx() {
+    const robux = Number(document.getElementById("num").value);
+
+ 
+    const fullValue = robux * 0.0035;
+
+    
+    const finalPayout = fullValue * 0.25;
+
+    document.getElementById("result").innerText =
+      "You would get: $" + finalPayout.toFixed(2);
+  }
+ 
+    </script>
 </head>
 <style>
     .topnav{
@@ -43,7 +58,14 @@
     color: deepskyblue;
     font-size: xx-large; 
   }
+form{
+   text-align: center;
+        background-color: deepskyblue;
+    color: white;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
 
+}
  
 </style>
 <body>
@@ -65,4 +87,11 @@
         </nav>
     </div>
 
-<
+
+    <form>
+    <label>robux to usd</label><br>
+    <input id="num"     type="number"><br>
+    <button type="button" onclick="calculateDevEx()">enter</button>
+    </form><br>
+    <p id="result"></p>
+</body>
